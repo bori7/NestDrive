@@ -31,12 +31,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
       /*      
         notice no mnemonic here? it will just use account 0 of the hardhat node to deploy
         (you can put in a mnemonic here to set the deployer locally)
-      
       */
-    },
-    rinkeby: {
-      url: process.env.ALCHEMY_API_URL,
-      accounts: [process.env.METAMASK_KEY],
     },
     rinkeby: {
       url: process.env.ALCHEMY_API_URL,
@@ -46,6 +41,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   etherscan: {
     apiKey: process.env.ETHERSCAN_KEY,
   },
+  plugins:["solidity-coverage"]
 };
 
 

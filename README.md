@@ -19,9 +19,7 @@
   - [Start Server](#start-server)
   - [Build the Frontend](#build-the-frontend)
 - [Testing the Smartcontract](#testing-the-smartcontract)
-  - [Coverage](#coverage)
-  - [Test](#test)
-- [Verified Contract Addresses](#verified-contract-addresses)
+- [NestDrive Contract Address](#nestdrive-contract-address)
 - [Live Link](#live-link)
 - [Contributors](#contributors)
 - [Contributing to the project](#contributing-to-the-project)
@@ -61,13 +59,13 @@ These files could be articles, books or similar. The default permission for uplo
 > ## Repo Setup
 
 <p align="justify">
-To setup the repo, first fork the TeamResilient Nestcoin repo, then clone the forked repository to create a copy on the local machine.
+To setup the repo, first fork the TeamResilient NestDrive repo, then clone the forked repository to create a copy on the local machine.
 </p>
 
     $ git clone https://github.com/pauline-banye/NestDrive.git
 
 <p align="justify">
-Change directory to the cloned repo and set the original Nestcoin repository as the "upstream" and your forked repository as the "origin" using gitbash.
+Change directory to the cloned repo and set the original NestDrive repository as the "upstream" and your forked repository as the "origin" using gitbash.
 </p>
 
     $ git remote add upstream https://github.com/TeamResilient/NestDrive.git
@@ -94,7 +92,7 @@ The steps involved are outlined below:-
 > ### Install Hardhat
 The first step involves cloning and installing hardhat.
 ```shell
-$ cd Nestcoin
+$ cd NestDrive
 
 $ npm i -D hardhat
 
@@ -125,9 +123,8 @@ $ npm install --save-dev "@nomiclabs/hardhat-waffle" "ethereum-waffle" "chai" "@
 - Once the app has been created, click on view key.
 - Copy the HTTP and place it in the .env file.
 
-
 <p align="center" width="100%">
-  <img src="https://drive.google.com/uc?export=view&id=1XFtACFN-LWvoDUD1QyJJY9uOc7KNkrL6" alt="alchemy"/>
+  <img src="https://drive.google.com/uc?export=view&id=1vPvT5LJRJy6B8hSi_3mPo16wC4u6MnEK" alt="alchemy"/>
 </p>
 
 #
@@ -171,11 +168,9 @@ $ npx hardhat run scripts/deploy.js --network rinkeby
 > ### Verify
 - To verify the smartcontract:
 ```
-$ npx hardhat verify ...............
+$ npx hardhat verify 0x459eBd3d66cfBfC118e8a20c4F16Fc75B376253d --network rinkeby
 ```
-**`*Note:`**
 
-...................
 #
 > ## Setup the Frontend
 - First run the frontend on your local server to ensure it's fully functional before building for production.
@@ -207,8 +202,10 @@ $ npm run build
 
 - Coverage is used to view the percentage of the code required by tests and unittests were implemented to ensure that the code functions as expected
 #
-> ### Coverage
-- Install Solidity Coverage
+**`Coverage Test`**
+- To test the smartcontract, first open a terminal and run the following command:
+
+- First install Solidity Coverage
 ```
   $ npm i solidity-coverage
 ```
@@ -216,41 +213,30 @@ $ npm run build
 
 - Install Ganache
 ``` 
-  $ npm i install ganache-cli
+  $ npm i ganache-cli
 ``` 
 - Run coverage
 ```
 $ npx hardhat coverage --network localhost
+
+# if you get errors and you want to trace the error in the terminal
+$ npx hardhat coverage --network localhost --show-stack-traces
 ```
 #
-> ### Test
 
-- To test the smartcontract, first open a terminal and run the following command:
+<p align="center" width="100%">
+  <img src="https://drive.google.com/uc?export=view&id=1tMhIUrDVPcIsMxTd4FAzapB04_R93Rcc" alt="coverage tests"/>
+</p>
 
-``` 
-$ npx hardhat node
-```
-- Leave the previous terminal running and open new terminal. 
-- Run the command below:
-```
-$ npx hardhat test --network localhost
-``` 
 #
-> ## Verified Contract Addresses
+> ## NestDrive Contract Address
 
-- The NestDrop Contract Address 
-
-  ................
-
-
-- The NestCoin Contract Address
-
-  .....................
+- https://rinkeby.etherscan.io/address/0x4dfBB942B4147596A03e1A76EFD72f12a0046FaA#code
 
 #  
 > ## Live Link
   
-  - ........................
+  - nestdrive.surge.sh
 #
 
 > ## Contributors
@@ -258,7 +244,7 @@ $ npx hardhat test --network localhost
 This Project was created by the members of TeamResilient during the Blockgames Internship.
 
 <p align="center" width="100%">
-  <img src="https://drive.google.com/uc?export=view&id=10Ibk5J441crY7Dh4DVPVM5bwx0JenaRL" alt="teamresilient"/>
+  <img src="https://drive.google.com/uc?export=view&id=13Gt4morUWHd7QNLk4e6Om7itygJiCOSl" alt="teamresilient"/>
 </p>
 
 #
